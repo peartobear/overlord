@@ -1,0 +1,21 @@
+OVERLORD = ./cmd/overlord.go
+
+all: run
+
+
+run:
+	go run -race ${OVERLORD}
+
+
+# build for specific OS target
+build-%:
+	GOOS=$* GOARCH=amd64 go build -o overlord-$* ${OVERLORD}
+
+
+build:
+	go build -o hskqiz ${OVERLORD}
+
+
+# clean any generated files
+clean:
+	rm -rvf cornelia overlord-*
