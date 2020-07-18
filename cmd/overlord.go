@@ -3,7 +3,7 @@ package main
 import (
 	"fmt"
 
-	"github.com/peartobear/overlord/pkg/overlord"
+	"https://github.com/peartobear/overlord/pkg/overlord"
 )
 
 func main() {

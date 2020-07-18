@@ -13,9 +13,9 @@ build-%:
 
 
 build:
-	go build -o hskqiz ${OVERLORD}
+	go build -o overlord ${OVERLORD}
 
 
 # clean any generated files
 clean:
-	rm -rvf cornelia overlord-*
+	rm -rvf overlord overlord-*
