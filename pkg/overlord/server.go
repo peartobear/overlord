@@ -40,6 +40,7 @@ func Start() {
 	}
 
 	r.HandleFunc("/", handleHome)
+	r.PathPrefix("/static/").Handler(http.StripPrefix("/static/", http.FileServer(http.Dir("./static"))))
 
 	log.Printf("Overlord is listening on %s\n", srv.Addr)
 	log.Fatal(srv.ListenAndServe())
