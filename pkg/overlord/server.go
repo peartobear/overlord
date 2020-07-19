@@ -30,8 +30,6 @@ func handleHome(w http.ResponseWriter, r *http.Request) {
 
 func Start() {
 
-	GetGiphy()
-
 	r := mux.NewRouter()
 
 	srv := &http.Server{

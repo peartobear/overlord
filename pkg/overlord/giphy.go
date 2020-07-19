@@ -10,12 +10,7 @@ import (
 
 const apiKey = "veYBGGjmCc6nULMKnBBN8hz4HtqlgogP"
 
-func Start() {
-	GetGiphy()
-}
-
 // get a gif through giphy translate secret sauce API
-//
 
 func GetGiphy() {
 

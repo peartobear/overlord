@@ -1,0 +1,68 @@
+<Head>
+    <Title> Overlord: GPT-3 Chat Bot </Title>
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/kognise/water.css@latest/dist/dark.min.css">
+    <link rel="stylesheet" href="static/overlord.css">
+</Head>
+
+<body>
+    <form action="POST" id="enterForm" class="OverlordForm">
+        <h1> Chat with Overlord </h1>
+
+        <div class="flexRow left">  
+            <label for="login--name">Username</label>
+            <div class="inputWrapper fixed ">
+                <input type="text" name="name" id="login--name" placeholder="simp" autofocus />
+            </div>
+        </div>
+        <div class="flexRow left">
+            <label for="login--email">Email (you'll receive a login code) </label>
+            <div class="inputWrapper fixed ">
+                <input type="email" name="email" id="login--email" placeholder="simp@gmail.com" />
+            </div>
+        </div>
+        <div class="flexRow right">
+            <div class="submitWrapper">
+                <input type="submit" value="Start" />
+            </div>
+        </div>
+    </form>
+
+    <form action="POST" id="verifyForm" class="OverlordForm">
+        <h1> Verify your email </h1>
+        <p class="checkSpamMessage"> Remember to check spam </p>
+
+        <div class="flexRow left">
+            <label for="verfiy--token"> Login Code</label>
+            <div class="inputWrapper fixed ">
+                <input type="text" name="token" id="verify-token" placeholder="420420">
+            </div>
+        </div>
+        <div class="flexRow right">
+            <div class="submitWrapper">
+                <input type="submit" value="Enter" />
+            </div>
+        </div>
+    </form>
+
+    <form action="POST" id="messageForm" class="OverlordForm"> 
+        <h1> Overlord.chat </h1>
+
+        <div class="messageListWrapper">
+            <ul class= "messageList">
+            </ul>
+        </div>
+
+        <div class="authorBox">
+            <label for="message--text"> Message </label>
+            <div class="inputWrapper authorBoxInput">
+                <input type="text" name="text" id="message--text" placeholder="Chat.." />
+            </div>
+            <div class="submitWrapper">
+                <input type="submit" value="Send" />
+            </div>
+        </div>
+    </form>
+
+
+</body>
