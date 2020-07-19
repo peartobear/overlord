@@ -7,6 +7,6 @@ import (
 )
 
 func main() {
-	fmt.Println("Waking up his highness, our overlord...")
+	fmt.Println("Waking up their highness, our overlord...")
 	overlord.Start()
 }
