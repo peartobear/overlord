@@ -22,7 +22,7 @@ func GetGiphy() {
 		log.Fatal(err)
 	}
 
-	req, err := http.NewRequest("POST", url, bytes.NewBuffer(requestBody))
+	req, err := http.NewRequest("GET", url, bytes.NewBuffer(requestBody))
 	req.Header.Set("Content-Type", "application/json")
 	if err != nil {
 		log.Fatal(err)

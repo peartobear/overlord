@@ -127,6 +127,76 @@ function logMessage(user, text) {
     scrollToEnd();
 }
 
+function verify(token) {
+    if (connection == null) {
+        return;
+    }
+
+    connection.send(JSON.stringify({
+        type: TYPE.Auth,
+        text: token,
+    }))
+}
+
+function send(text) {
+    if (connection == null) {
+        return;
+    }
+
+    connection.send(JSON.stringify({
+        type: TYPE.text,
+        text: text,
+    }))
+}
+
+function close() {
+    if (connection == null) {
+        return;
+    }
+    
+    connection.close();
+    connection = null;
+}
+
+enterForm.addEventListener('submit', evt => {
+    evt.preventDefault();
+
+    const name = enterForm.querySelector('[name="name"]').value;
+    const email = enterForm.querySelector('[name="email"]').value;
+
+    if (!name || !email) {
+        return
+    }
+
+    connect(name, email)
+
+});
+
+verifyForm.addEventListener('submit', evt => {
+    evt.preventDefault();
+
+    const token = verifyForm.querySelector('[name="tokem"]').value;
+    if (!token.trim()) {
+        return
+    }
+
+    verify(token);
+})
+
+
+messageForm.addEventListener('submit', evt => {
+    evt.preventDefault();
+
+    const textInput = messageForm.querySelector('[name="text"]');
+    const text = textInput.value;
+
+    if (!text.trim()) {
+        return;
+    }
+
+    send(text);
+    textInput.value = '';
+});
 
  hide(verifyForm);
  hide(messageForm);
