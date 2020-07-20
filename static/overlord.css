@@ -11,7 +11,8 @@ button {
 }
 
 h1 {
-    font-family: 'VT323', monospace;
+    font-family: /*iOS*/"AvenirNextCondensed-Bold", "Futura-CondensedExtraBold", /*MacOSX*/HelveticaNeue-CondensedBold, /*Ubuntu*/ "Ubuntu Condensed", "Liberation Sans Narrow",  /*Windows*/"Franklin Gothic Demi Cond", "Arial Narrow", /*Android*/sans-serif-condensed, /*Fallback*/Arial, "Trebuchet MS", "Lucida Grande", Tahoma, Verdana, sans-serif;
+    font-stretch: condensed;
     color: #5affe7;
     letter-spacing: 0.075em;
 }
