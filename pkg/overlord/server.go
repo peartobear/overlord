@@ -36,7 +36,7 @@ func Start() {
 
 	srv := &http.Server{
 		Handler:      r,
-		Addr:         "127.0.0.1:4884",
+		Addr:         "127.0.0.1:8000",
 		WriteTimeout: 60 * time.Second,
 		ReadTimeout:  60 * time.Second,
 	}

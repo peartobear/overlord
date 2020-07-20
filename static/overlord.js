@@ -18,11 +18,11 @@ const TYPE = {
 }
 
 function show(el) {
-   el.style.display = 'flex';
+   el.removeClass("hidden");
  }
 
 function hide (el) {
-    el.style.display = 'none';
+    el.addClass("hidden");
  }
 
 function scrollToEnd() {
@@ -200,3 +200,5 @@ messageForm.addEventListener('submit', evt => {
 
  hide(verifyForm);
  hide(messageForm);
+
+ 
